@@ -1,0 +1,12 @@
+<input type="text" class="form-control" [(ngModel)]="username">
+<p>{{ username }}</p>
+<button class="btn btn-primary" [disabled]="username === ''" (click)="onChangeName()">Click</button>
+<hr>
+
+<label>Server Name</label>
+<input type="text" class="form-control" [(ngModel)]="serverName">
+
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
